@@ -3,6 +3,7 @@ name: Multiarch builds
 on:
   push:
     branches: [ 'release-v*' ]
+  workflow_dispatch: # Manual workflow trigger  
 
 jobs:
   multiarch-build:

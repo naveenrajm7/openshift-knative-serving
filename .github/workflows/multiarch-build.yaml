@@ -6,5 +6,13 @@ on:
 
 jobs:
   multiarch-build:
-    uses: openshift-knative/hack/.github/workflows/multiarch-build.yaml@main
+    uses: openshift-knative/hack/.github/workflows/multiarch-containerfile-build.yaml@main
     secrets: inherit
+    strategy:
+      matrix:
+        image:
+        - activator
+        - autoscaler   
+    with:
+      image: ${{ matrix.image }}
+      containerfile: openshift/ci-operator/knative-images/${{ matrix.image }}/Dockerfile

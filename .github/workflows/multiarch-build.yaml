@@ -7,8 +7,7 @@ on:
 
 jobs:
   multiarch-build:
-    uses: openshift-knative/hack/.github/workflows/multiarch-containerfile-build.yaml@main
-    secrets: inherit
+    uses: naveenrajm7/openshift-knative-hack/.github/workflows/multiarch-containerfile-build.yaml@main
     strategy:
       matrix:
         image:

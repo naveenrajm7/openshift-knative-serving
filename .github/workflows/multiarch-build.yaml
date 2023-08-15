@@ -13,7 +13,6 @@ jobs:
         image:
         - activator
         - autoscaler
-        - queue   
     with:
       image: ${{ matrix.image }}
       containerfile: openshift/ci-operator/knative-images/${{ matrix.image }}/Dockerfile

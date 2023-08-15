@@ -8,8 +8,6 @@ on:
 jobs:
   multiarch-build:
     uses: naveenrajm7/openshift-knative-hack/.github/workflows/multiarch-containerfile-build.yaml@main
-    with:
-      organization: naveenrajm
     strategy:
       matrix:
         image:
@@ -19,3 +17,4 @@ jobs:
     with:
       image: ${{ matrix.image }}
       containerfile: openshift/ci-operator/knative-images/${{ matrix.image }}/Dockerfile
+      organization: naveenrajm

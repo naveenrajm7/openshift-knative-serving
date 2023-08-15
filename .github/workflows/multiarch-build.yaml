@@ -14,11 +14,13 @@ jobs:
         image:
         - activator
         - autoscaler
+        - autoscaler-hpa
         - controller
-        - queue
-        - webhook
         - domain-mapping
         - domain-mapping-webhook
+        - migrate        
+        - queue
+        - webhook
     with:
       image: ${{ matrix.image }}
       containerfile: openshift/ci-operator/knative-images/${{ matrix.image }}/Dockerfile

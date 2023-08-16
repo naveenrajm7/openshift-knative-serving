@@ -1,6 +1,7 @@
 # Do not edit! This file was generated via Makefile
 FROM quay.io/projectquay/golang:1.19  as builder
 
+ENV GOBIN=/go/bin
 RUN mkdir -p /go/src/github.com/openshift/origin
 COPY . /go/src/github.com/openshift/origin
 WORKDIR /go/src/github.com/openshift/origin

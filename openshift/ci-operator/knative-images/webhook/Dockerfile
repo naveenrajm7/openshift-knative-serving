@@ -1,5 +1,5 @@
 # Do not edit! This file was generated via Makefile
-FROM docker.io/library/golang:1.19  as builder
+FROM quay.io/projectquay/golang:1.19  as builder
 
 COPY . .
 RUN make install test-install
